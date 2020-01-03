@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tab Shortcuts</title>
+    <style>
+      #top-container {
+        padding: 10px;
+        min-width: 350px;
+      }
+      #input-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      h1 {
+        color: #535657;
+        font-size: 18px;
+        border-bottom: 1px solid #1F487E;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      label {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      input, textarea {
+        display: block;
+        min-width: 330px;
+        width: 100%;
+      }
+      textarea {
+        height: 50px;
+      }
+      button {
+        display: inline-block;
+        height: 25px;
+        width: 60px;
+        outline: none;
+        border-radius: 6px;
+      }
+      button#add-btn {
+        color: white;
+        background-color: #2364AA;
+      }
+      #clear-all-btn {
+        color: #fc0335;
+        cursor: pointer;
+        font-size: 12px;
+      }
+      #notice-p {
+        font-size: 12px;
+      }
+      .item-div {
+        padding: 10px;
+        border-radius: 6px;
+        background-color: #2364AA;
+        color: white;
+        margin-bottom: 10px;
+      }
+      .item-div .item-title{
+        color: white;
+      }
+      .item-div .item-title:hover{
+        color: white;
+      }
+      .item-div .item-p {
+        padding: 5px;
+        background-color: white;
+        border-radius: 6px;
+        color: black;
+        width: calc(100% - 20px);
+        margin-top: 10px;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="top-container">
+      <h1>Mark Current</h1>
+      <div id="input-div">
+        <label>Page URL: 
+          <input id="url" name="url" required />
+        </label>
+        <label>Custom Name:
+          <input id="name" placeholder="brief of the page" required/>
+        </label>
+        <label>Page Snippet (optional)
+          <textarea id="snippet" placeholder="important snippet (optional)"></textarea>
+        </label>
+      </div>
+      <button id="add-btn">Add</button>
+      <button id="clear-btn">Clear</button>
+      <p id="notice-p" style="display: none;">Record saved!</p>
+      <h1 style="margin-top: 30px;"><span>Previously Marked</span><span id="clear-all-btn">Delete All</span></h1>
+      <div id="tabs-container">
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
